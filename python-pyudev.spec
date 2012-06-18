@@ -13,7 +13,8 @@ Source0:          http://pypi.python.org/packages/source/p/pyudev/pyudev-0.15.ta
 BuildArch:        noarch
 
 
-BuildRequires:    python2-devel
+BuildRequires:    python-devel python-setuptools libudev
+Requires:         python python-setuptools libudev
 
 %description
 ###### pyudev ######
@@ -66,9 +67,7 @@ http://github.com/lunaryorn/pyudev .. _git: http://www.git-scm.com/
 
 
 %files
-%doc
-COPYING
-README.rst
+%doc COPYING README.rst
 %{python_sitelib}/%{modname}
 %{python_sitelib}/%{modname}-%{version}*
 
