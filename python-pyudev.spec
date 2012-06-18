@@ -6,7 +6,7 @@ Release:          1%{?dist}
 Summary:          A libudev binding
 
 Group:            Development/Languages
-License:          
+License:          LGPL
 URL:              http://pypi.python.org/pypi/pyudev
 Source0:          http://pypi.python.org/packages/source/p/pyudev/pyudev-0.15.tar.gz
 
@@ -67,11 +67,12 @@ http://github.com/lunaryorn/pyudev .. _git: http://www.git-scm.com/
 
 %files
 %doc
-
+COPYING
+README.rst
 %{python_sitelib}/%{modname}
 %{python_sitelib}/%{modname}-%{version}*
 
 
 %changelog
-* Mon Jun 18 2012 clockfort <> 0.15-1
-- initial package for Fedora
+* Mon Jun 18 2012 Chris Lockfort <clockfort@redhat.com> 0.15-1
+- initial package
