@@ -2,7 +2,7 @@
 
 Name:             python-pyudev
 Version:          0.15
-Release:          1%{?dist}
+Release:          2%{?dist}
 Summary:          A libudev binding
 
 Group:            Development/Languages
@@ -13,8 +13,8 @@ Source0:          http://pypi.python.org/packages/source/p/pyudev/pyudev-0.15.ta
 BuildArch:        noarch
 
 
-BuildRequires:    python-devel python-setuptools libudev
-Requires:         python python-setuptools libudev
+BuildRequires:    python-devel python-setuptools systemd-devel
+Requires:         python python-setuptools
 
 %description
 ###### pyudev ######
@@ -47,5 +47,7 @@ officially supported.
 
 
 %changelog
+* Tue Jul 17 2012 Chris Lockfort <clockfort@redhat.com> 0.15-2
+- Build changes to accomodate udev-->systemd merge
 * Mon Jun 18 2012 Chris Lockfort <clockfort@redhat.com> 0.15-1
 - initial package
